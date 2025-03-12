@@ -3,7 +3,7 @@
 
 What is new in v1.2:
 <br />
--new method added: .getInfo(). This method allows a user to get information about class type, methods, and fields (public only) from an object. How it is typed, let x be the index of teh object in the structure: value.getinfo(value.retirieve(x))  .  This will print: Class type, all public method names (bulit-in and custom), and public fields.
+-new method added: .getInfo(). This method allows a user to get information about class type, methods, and fields (public only) from an object. How it is typed, let x be the index of the object in the structure: value.getinfo(value.retirieve(x))  .  This will print: Class type, all public method names (bulit-in and custom), and public fields.
 
 <br />
 <br />
