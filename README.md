@@ -9,7 +9,7 @@ What is new in v1.2:
 <br />
 
 Notes on HGroups Package:<br />
-Car object and Main is for testing purposes.
+Car object and Main are for testing purposes.
 
 <br />
 
