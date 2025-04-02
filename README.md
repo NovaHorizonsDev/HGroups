@@ -12,7 +12,12 @@ Notes on HGroups Package:<br />
 Car object and Main are for testing purposes.
 
 <br />
+Goal:<br />
 
+The goal of this library is to be a tool for those who intend to analyze data in a local Java environment without the need for a full database structure. Similar to tuples, HGroups can contain any object type in each value. Unlike tuples, users can manipulate these HGoups into what is needed. Updates and new additions will be added in the future.  
+
+
+<br />
 About:
 
 Each Instance can hold up to a maximum of what their Class names entail of any Object combinations:    
@@ -55,33 +60,30 @@ traidExample.get("Hello World") would result in a pair containing (Y)(1, Book(ti
 Pair get(int i) returns the other data in the pair:
 pair.get(1) would result in (Y)(Book(title))
 
-Type Y is a generic type that is to return any data type hence why casting or pre-storage(assign to a variable) is necessary for use.
+Type Y is a generic type that is to return any data type, hence why casting or pre-storage(assigning to a variable) is necessary for use.
 
-If the object is not in structure, the method will throw NullPointerException.
+If the object is not in the structure, the method will throw NullPointerException.
 
 <br />
 <br />
 .retirieve(number):
 
-Get data at index number. If the number is below or above size, the method will throw NullPointerException.
+Get data at the index number. If the number is below or above size, the method will throw NullPointerException.
 
 <br />
 <br />
 .printGroup():
 <br />
-The print method creates an f string of elements of the tuple and prints it to consoles. If custom Object, the print
-method will print objectType and memory location. As of this version(1.1) there is no method to custom print.
+The print method creates an f-string of elements of the tuple and prints it to the console. If a custom Object, the print
+method will print the objectType and the memory location. As of version 1.3, there is no method to custom print.
 
 <br />
 <br />
 .getInfo(obj.retrieve(x)) : 
 <br />
-This method allows a user to get information about class types, methods, and fields (public only) from an object. How it is typed, let x be the index of the object in the structure (I named 'value'): value.getinfo(value.retirieve(x));
+This method allows a user to get information about class types, methods, and fields (public only) from an object. How it is typed, let x be the index of the object in the structure (I named 'value'): value.getinfo(value.retrieve(x));
 
 <br />
 
 <br />
 
-Goal:<br />
-
-The goal of this library is to be a tool for those who intend to analyze data in a local java environment without the need for a full database structure. Similar to tuples, HGroups can contain any object type in each value. Unlike tuples, users can manipulate these HGoups into what is needed.   
