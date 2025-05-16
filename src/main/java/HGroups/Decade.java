@@ -57,7 +57,30 @@ public class Decade<A,B,C,D,E,F,G,H,I,J> {
             throw new NullPointerException("Invalid entry: "+data);
     }
 
-
+    public<Y> Y retrieve(int i){
+        if (i==1)
+            return (Y)data;
+        else if(i==2)
+            return (Y)data2;
+        else if (i==3)
+            return (Y)data3;
+        else if (i==4)
+            return (Y)data4;
+        else if(i==5)
+            return (Y)data5;
+        else if (i==6)
+            return (Y)data6;
+        else if (i==7)
+            return (Y)data7;
+        else if(i==8)
+            return (Y)data8;
+        else if (i==9)
+            return (Y)data9;
+        else if (i==10)
+            return (Y)data10;
+        else
+            throw new NullPointerException("Invalid entry: "+i);
+    }
 
     public<Y> void getInfo(Y query){
         Method[] methods = query.getClass().getMethods();
