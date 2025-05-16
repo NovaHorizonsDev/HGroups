@@ -1,9 +1,9 @@
-# HGroups Package v1.2: GetInfo Update
+# HGroups Package v1.3: Decade Update
 
 
-What is new in v1.2:
+What is new in v1.3:
 <br />
--new method added: .getInfo(). This method allows a user to get information about class type, methods, and fields (public only) from an object. How it is typed, let x be the index of the object in the structure: value.getinfo(value.retirieve(x))  .  This will print: Class type, all public method names (bulit-in and custom), and public fields.
+-A new class was added: The building of the Decade class [10 group].
 
 <br />
 <br />
@@ -12,10 +12,15 @@ Notes on HGroups Package:<br />
 Car object and Main are for testing purposes.
 
 <br />
+Goal:<br />
 
+The goal of this library is to be a tool for those who intend to analyze data in a local Java environment without the need for a full database structure. Similar to tuples, HGroups can contain any object type in each value. Unlike tuples, users can manipulate these HGoups into what is needed. Updates and new additions will be added in the future.  
+
+
+<br />
 About:
 
-Each Instance can hold up to a maximum of what their Class names entail of any Object combinatoions:    
+Each Instance can hold up to a maximum of what their Class names entail of any Object combinations:    
 
 Pair- 2 <br />
 Triad- 3<br />
@@ -25,14 +30,15 @@ Hexad- 6<br />
 Heptad- 7 <br />
 Octad- 8 <br />
 Ennead- 9 <br />
+Decade- 10<br />
 ...
 
 A Tetrad can either be created directly (4 Objects) or a merge of 2 Pairs (denoted as pair1 and pair2)
-The merge happens with contents of pair1 being added as data and data 2 and pair2 contents as data3 and data4 .
+The merge happens with the contents of pair1 being added as data and data 2 and pair2 contents as data3 and data4.
 code: new Tetrad(data, data2, data3, data4) "or" new Tetrad(pair1, pair2)
 
 A Pentad can either be created directly (5 Objects) or a merge of 1 Triad and 1 Pairs (denoted as triad and pair)
-The merge happens with contents of triad being added as data, data2, and data3 and pair contents as data4 and data5 .
+The merge happens with the contents of the triad being added as data, data2, and data3 and pair contents as data4 and data5.
 code: new Pentad(data, data2, data3, data4, data5) "or" new Pentad(triad, pair)
 
 
@@ -44,43 +50,40 @@ Methods:
 
 .get(X data):
 <br />
-All get(X data) and retrieve(int i) methods require either seperate assignment to a variable or casting before usage.
+All get(X data) and retrieve(int i) methods require either separate assignment to a variable or casting before usage.
 
-get creates a Tuple rank lower of the other elements Ex:
+get creates a Tuple rank lower than the other elements Ex:
 
 Triad<Integer, String, Book> triadExample = new Triad(1, "Hello World,", Book(title));
-traidExample.get("Hello Wold") would result in a pair containing (Y)(1, Book(title))
+traidExample.get("Hello World") would result in a pair containing (Y)(1, Book(title))
 
 Pair get(int i) returns the other data in the pair:
 pair.get(1) would result in (Y)(Book(title))
 
-Type Y is a generic type that is to return any data type hence why casting or pre-storage(assign to a variable) is necessary for use.
+Type Y is a generic type that is to return any data type, hence why casting or pre-storage(assigning to a variable) is necessary for use.
 
-If object is not in structure, method will throw NullPointerException.
+If the object is not in the structure, the method will throw NullPointerException.
 
 <br />
 <br />
 .retirieve(number):
 
-Get data at index number. If number is below or above size, method will throw NullPointerException.
+Get data at the index number. If the number is below or above size, the method will throw NullPointerException.
 
 <br />
 <br />
 .printGroup():
 <br />
-The print method creates an f string of elements of the tuple and prints it to consoles. If custom Object, the print
-method will print objectType and memory location. As of this version(1.1) there is no method to custom print.
+The print method creates an f-string of elements of the tuple and prints it to the console. If a custom Object, the print
+method will print the objectType and the memory location. As of version 1.3, there is no method to custom print.
 
 <br />
 <br />
 .getInfo(obj.retrieve(x)) : 
 <br />
-This method allows a user to get information about class type, methods, and fields (public only) from an object. How it is typed, let x be the index of the object in the structure (I named 'value'): value.getinfo(value.retirieve(x));
+This method allows a user to get information about class types, methods, and fields (public only) from an object. How it is typed, let x be the index of the object in the structure (I named 'value'): value.getinfo(value.retrieve(x));
 
 <br />
 
 <br />
 
-Goal:<br />
-
-The goal of this library is to be a tool for those who intend to analyze data in a local java environment without the need for a full database structure. Similar to tuples, HGroups can contain any object type in each value. Unlike tuples, users can manipulate these HGoups into what is needed.   
